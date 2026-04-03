@@ -2,21 +2,22 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
-
+const mongoose = require('mongoose');
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.post('/test', (req, res) => {
-  res.json({ message: 'test works' });
-});
+
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected!'))
+  .catch(err => console.log('MongoDB error:', err));
+
 // Routes
 app.use('/api/auth', authRoutes);
-app.use((req, res, next) => {
-  console.log('Request:', req.method, req.url);
-  next();
-});
+
+
 app.get('/', (req, res) => {
   res.send('Server is running!');
 });
