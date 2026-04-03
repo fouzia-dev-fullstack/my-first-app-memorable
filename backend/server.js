@@ -17,6 +17,12 @@ mongoose.connect(process.env.MONGO_URI)
 // Routes
 app.use('/api/auth', authRoutes);
 
+const verifyToken = require('./middleware/auth');
+
+// Protected route
+app.get('/api/protected', verifyToken, (req, res) => {
+  res.json({ message: `Welcome ${req.user.username}! You are logged in.` });
+});
 
 app.get('/', (req, res) => {
   res.send('Server is running!');
