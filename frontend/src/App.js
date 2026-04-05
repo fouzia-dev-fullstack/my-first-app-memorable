@@ -10,7 +10,7 @@ function App() {
   const [isError, setIsError] = useState(false);
 
   const handleRegister = async () => {
-    const res = await fetch('my-first-app-memorable-production.up.railway.app/api/auth/register', {
+    const res = await fetch('https://my-first-app-memorable-production.up.railway.app/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
@@ -21,7 +21,7 @@ function App() {
   };
 
   const handleLogin = async () => {
-    const res = await fetch('my-first-app-memorable-production.up.railway.app/api/auth/login', {
+    const res = await fetch('https://my-first-app-memorable-production.up.railway.app/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
@@ -35,7 +35,7 @@ function App() {
   };
 
   const handleProtected = async () => {
-    const res = await fetch('my-first-app-memorable-production.up.railway.app/api/protected', {
+    const res = await fetch('https://my-first-app-memorable-production.up.railway.app/api/protected', {
       method: 'GET',
       headers: { 'authorization': token }
     });
