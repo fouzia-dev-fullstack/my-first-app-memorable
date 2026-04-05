@@ -1,8 +1,9 @@
-# my-first-app-memorable
-My first web app built with React and Node.js
-
 # JWT Authentication App 
+
 A full-stack authentication system built with React, Node.js, Express, MongoDB and JWT.
+
+##  Live Demo
+[https://my-first-app-memorable.vercel.app/](https://my-first-app-memorable.vercel.app/)
 
 ## Features
 - User Registration
@@ -11,14 +12,17 @@ A full-stack authentication system built with React, Node.js, Express, MongoDB a
 - Password Hashing with bcrypt
 - Protected Routes
 - MongoDB Database
+- Show/Hide Password Toggle
+- Error messages with color feedback
 
 ## Tech Stack
-**Frontend:** React
+**Frontend:** React, CSS
 **Backend:** Node.js, Express
-**Database:** MongoDB
+**Database:** MongoDB Atlas
 **Authentication:** JWT, bcrypt
+**Deployment:** Vercel (Frontend), Railway (Backend)
 
-## How to Run
+## How to Run Locally
 
 ### Backend
 ```bash
