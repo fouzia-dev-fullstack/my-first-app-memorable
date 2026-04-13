@@ -46,4 +46,7 @@ npm start
 | GET | /api/protected | Protected route (requires token) |
 
 ## Author
-Made with ❤️ while learning full-stack development
+Fouzia Anjum — Self-taught Full Stack Developer
+
+GitHub: @fouzia-dev-fullstack
+LinkedIn: linkedin.com/in/fouziaanjum-s
